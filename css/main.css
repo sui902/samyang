@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+body {font-family: "SamyangNeo", sans-serif; font-size: 1.6rem; line-height: 1.5; color: #000;}
+#wrap {overflow-x: hidden;}
+.inner {padding: 0 20px; max-width: 1400px; margin: 0 auto;}
+
+
+/* header */
+#header .inner {font-family: "Pretendard" sans-serif; display: flex; justify-content: space-between; padding: 20px; align-items: center;}
+#header .gnb {display: flex;}
+#header .gnb > li > a {display: block; padding: 10px 40px; font-size: 2rem; font-weight: 600;}
+#header .menu {border: none; background: transparent; cursor: pointer; display: none;}
+
+
+@media (max-width:1000px) {
+    #header h1 img {width: 120px;}
+    #header .menu {display: block;}
+    #header .gnb {display: none;}
+}
+
+
+/* visual */
+.visual {height: 800px; overflow: hidden; position: relative;}
+.visual video {width: 100%; height: 100%; object-fit: cover;}
+.visual .visual_txt {font-size: 2rem; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 100%; text-align: center; color: #fff;}
+.visual .visual_txt h2 {font-size: 5rem; text-transform: uppercase; margin-bottom: 20px;}
+.visual .visual_txt span {color: #e4ff1a;}
+
+
+section h2 {font-size: 5rem; text-transform: uppercase;}
+section h3 {font-size: 3.5rem; font-weight: 400; text-transform: capitalize;}
+a.btn_more {display: inline-block; background: url(../images/btn_more.svg) no-repeat right center; padding: 10px 45px 10px 0;;}
+
+
+@media (max-width:500px){
+section h2 {font-size: 3.5rem;}
+section h3 {font-size: 2.5rem;}
+}
+
+
+@media (max-width: 750px) {
+    .visual .visual_txt h2 {font-size: 3rem;}
+    .visual .visual_txt {font-size: 1.6rem;}
+    .visual {height: 600px;}
+}
+
+
+/* business */
+.business {margin: 200px 0;}
+.business ul {display: grid; grid-template-columns: repeat(3,1fr);}
+.business ul li img {width: 100%;}
+.business ul li {position: relative;}
+.business ul li div {position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 100%; text-align: center; color: #fff;}
+
+/* hover */
+
+.business ul li h3 {transform: translateY(40px); transition: all 0.5s;}
+.business ul li a.btn_more {transform: translateY(40px); transition: all 0.5s 0.1s; opacity: 0;}
+.business ul li:hover h3 {transform: translateY(0px)}
+.business ul li:hover a.btn_more {transform: translateY(0px); opacity: 1;}
+
+@media (max-width: 950px) {
+    .business {margin: 100px 0;}
+    .business ul {grid-template-columns: 1fr;}
+}
+
+
+/* history */
+.history {background: url(../images/history_bg.jpg) no-repeat center; height: 500px; text-align: center; color: #fff; display: flex; justify-content: center; align-items: center;}
+.history p {margin: 20px 0;}
+
+/* hover */
+.history h2 {transform: translateY(40px); transition: all 0.5s;}
+.history p {transform: translateY(40px); transition: all 0.5s 0.1s;}
+.history a.btn_more {transform: translateY(40px); opacity: 0; transition: all 0.5s 0.2s;}
+
+.history:hover h2 {transform: translateY(0px);}
+.history:hover p {transform: translateY(0px);}
+.history:hover a.btn_more {transform: translateY(0px); opacity: 1;}
+
+
+
+/* company */
+.company {margin: 200px 0;}
+.company .inner {display: grid; grid-template-columns: 1fr 1fr;}
+.company .inner > div img {width: 100%; transition: all 0.5s;}
+.company .inner > div:hover img {transform: scale(1.2,1.2);} 
+.company .inner > div {position: relative; overflow: hidden;}
+.company .inner > div .company_txt {position: absolute; left: 0; top: 0; color: #fff; padding: 50px;}
+.company .inner > div .company_txt a.btn_more {margin-top: 20px;}
+
+/* hover */
+.company .inner > div .company_txt a.btn_more {transform: translateY(40px); opacity: 0; transition: all 0.5s;}
+.company .inner > div:hover .company_txt a.btn_more {transform: translateY(0); opacity: 1;}
+
+
+
+
+@media (max-width:900px) {
+    .company {margin: 100px 0;}
+    .company .inner {grid-template-columns: 1fr;} 
+}
+
+@media (max-width:550px) {
+    .company .inner > div .company_txt {padding: 30px;}
+}
+
+/* footer */
+#footer {background: #26247b; padding: 100px 0; text-align: center; color: #fff; font-family: "Pretendard" sans-serif;}
+#footer .footer_link a {padding: 0 8px;}
+#footer .footer_link {margin: 40px 0 20px;}
+#footer .copy {opacity: 0.5;}
+
+
+@media (max-width: 550px) {
+    #footer {font-size: 1.4rem; padding: 70px 0;}
+}
+
